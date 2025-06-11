@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Current Inventory</h2>
+<form method="POST" action="/recipes">
+    <ul>
+    {% for item in inventory %}
+        <li>
+            <input type="checkbox" name="selected" value="{{ item.name }}">
+            {{ item.name }} - Purchased: {{ item.date }} - Expires: 
+            <span class="{{ item.status }}">{{ item.expiry }}</span>
+        </li>
+    {% endfor %}
+    </ul>
+    <input type="submit" value="Make Recipe">
+</form>
+{% endblock %}

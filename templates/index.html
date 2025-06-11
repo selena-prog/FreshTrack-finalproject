@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Ingredients</h2>
+<form method="POST" action="/add">
+  <fieldset>
+    <legend>Choose ingredients:</legend>
+    {% for ing in ingredients %}
+      <label><input type="checkbox" name="ingredients" value="{{ ing }}"> {{ ing }}</label><br>
+    {% endfor %}
+  </fieldset>
+  <label for="date">Purchase Date:</label>
+  <input type="date" id="date" name="date" required>
+  <input type="submit" value="Add">
+</form>
+{% endblock %}
+

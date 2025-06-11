@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Recipe Suggestions</h2>
+<ul>
+    {% for recipe in recipes %}
+        <li>
+            <strong>{{ recipe['title'] }}</strong><br>
+            <img src="{{ recipe['image'] }}" width="100"><br>
+            Used Ingredients: {{ recipe['usedIngredientCount'] }}<br>
+            Missing Ingredients: {{ recipe['missedIngredientCount'] }}<br>
+            <a href="https://spoonacular.com/recipes/{{ recipe['title'] | replace(' ', '-') }}-{{ recipe['id'] }}" target="_blank">View Recipe</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

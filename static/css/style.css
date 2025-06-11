@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6ffe6;
+    margin: 20px;
+}
+
+header, footer {
+    background-color: #ccffcc;
+    padding: 10px;
+    text-align: center;
+}
+
+form, .inventory, .recipes {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.expired { color: red; }
+.warning { color: orange; }
+.fresh { color: green; }
